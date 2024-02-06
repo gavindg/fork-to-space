@@ -1,0 +1,65 @@
+[gd_scene load_steps=4 format=3 uid="uid://bb7ff5y67lxxi"]
+
+[ext_resource type="FontFile" uid="uid://de8cegf15b0wp" path="res://fonts/mononoki/mononoki-Regular.ttf" id="1_i6582"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hjfln"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4m10t"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="Textbox" type="CanvasLayer"]
+
+[node name="BoxContainer" type="MarginContainer" parent="."]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -216.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="Panel" type="Panel" parent="BoxContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_hjfln")
+
+[node name="TextContainer" type="MarginContainer" parent="BoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="Panel" type="Panel" parent="BoxContainer/TextContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="BoxContainer/TextContainer"]
+layout_mode = 2
+
+[node name="Text" type="Label" parent="BoxContainer/TextContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("1_i6582")
+theme_override_font_sizes/font_size = 54
+theme_override_styles/normal = SubResource("StyleBoxFlat_4m10t")
+text = "the quick brown fox jumped over the lazy dog the quick brown fox jumped over the lazy dog the quick brown fox"
+autowrap_mode = 2
+clip_text = true
+
+[node name="Down" type="Label" parent="BoxContainer/TextContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("1_i6582")
+theme_override_font_sizes/font_size = 32
+text = "v"
