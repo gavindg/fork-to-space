@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://drgtnff60hy6l"]
 
-[ext_resource type="PackedScene" uid="uid://bxuan5t7jof4n" path="res://character/main_char.tscn" id="1_ivm2d"]
+[ext_resource type="PackedScene" uid="uid://bxuan5t7jof4n" path="res://Character/main_char.tscn" id="1_ivm2d"]
 [ext_resource type="Script" path="res://TestResources/test_map/test_map.gd" id="1_lpfj8"]
 [ext_resource type="Texture2D" uid="uid://dn2jlurfviun0" path="res://Art/TestTilesheet/tilesheet_complete.png" id="2_amcpj"]
 [ext_resource type="PackedScene" uid="uid://bcmyb1be6m717" path="res://UI/user_interface_canvas_layer.tscn" id="3_87rt6"]

@@ -175,13 +175,13 @@ func animation_handler() -> void:
 			animation_player.play("run_left")
 		else:
 			animation_player.play("run_right")
-	elif velocity.x !=0:
-		if velocity.x < 0:
-			animation_player.play("jump_left")
-		else:
-			animation_player.play("jump_right")
-	else:
+	elif is_on_floor():
 		if last_move_direction < 0:
 			animation_player.play("idle_left")
 		else:
 			animation_player.play("idle_right")
+	else:
+		if last_move_direction < 0:
+			animation_player.play("jump_left")
+		else:
+			animation_player.play("jump_right")
